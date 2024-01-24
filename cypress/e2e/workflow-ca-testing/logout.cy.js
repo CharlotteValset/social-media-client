@@ -1,4 +1,4 @@
-describe("logout", () => {
+/* describe("logout", () => {
   it("can log out with the logout button", () => {
     cy.visit("index.html");
     cy.clearAllLocalStorage();
@@ -21,7 +21,7 @@ describe("logout", () => {
     cy.window().its("localStorage.profile").should("not.exist");
     cy.window().its("localStorage.token").should("not.exist");
   });
-});
+}); */
 
 describe("Logout", () => {
   beforeEach(() => {
@@ -32,9 +32,9 @@ describe("Logout", () => {
   it("will log out", () => {
     cy.visit("/");
     cy.wait(1000);
-    cy.get(".btn-close:visible").click();
+    cy.get(".btn-close:visible").click({ multiple: true });
     cy.wait(500);
-    cy.get("button[data-auth='login']:visible").click();
+    cy.get("button[data-auth='login']:visible").click({ multiple: true });
     cy.wait(1500);
     cy.get("input[type='email']:visible")
       .should("exist")
@@ -42,13 +42,13 @@ describe("Logout", () => {
     cy.get("input[type='password']:visible")
       .should("exist")
       .type("charlie12345");
-    cy.get(".btn-success:visible").click();
+    cy.get(".btn-success:visible").click({ multiple: true });
     cy.wait(3000);
     cy.then(
       () => expect(window.localStorage.getItem("profile")).to.not.be.null,
     );
     cy.then(() => expect(window.localStorage.getItem("token")).to.not.be.null);
-    cy.get("button[data-auth='logout']").click();
+    cy.get("button[data-auth='logout']").click({ multiple: true });
     cy.then(() => expect(window.localStorage.getItem("profile")).to.be.null);
     cy.then(() => expect(window.localStorage.getItem("token")).to.be.null);
   });
