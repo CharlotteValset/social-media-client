@@ -1,4 +1,4 @@
-/* describe("logout", () => {
+describe("logout", () => {
   it("can log out with the logout button", () => {
     cy.visit("index.html");
     cy.clearAllLocalStorage();
@@ -21,7 +21,7 @@
     cy.window().its("localStorage.profile").should("not.exist");
     cy.window().its("localStorage.token").should("not.exist");
   });
-}); */
+});
 
 describe("Logout", () => {
   beforeEach(() => {
