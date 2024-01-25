@@ -4,7 +4,7 @@ describe("logout", () => {
     cy.clearAllLocalStorage();
 
     cy.wait(2000);
-    cy.get("button[data-bs-target='#loginModal']:visible").click({
+    cy.get("button[data-bs-target='#loginModal']").click({
       multiple: true,
     });
     cy.get("#loginModal #loginEmail")
