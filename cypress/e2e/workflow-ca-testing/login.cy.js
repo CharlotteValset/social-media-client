@@ -25,7 +25,6 @@ describe("login", () => {
     cy.get("button[data-bs-target='#loginModal']:visible").click({
       multiple: true,
     });
-    cy.wait(2000);
     cy.get("#loginModal #loginEmail")
       .should("exist")
       .type("charlie123@gmail.no");
