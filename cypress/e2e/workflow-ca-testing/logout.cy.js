@@ -4,7 +4,7 @@ describe("logout", () => {
     cy.clearAllLocalStorage();
 
     cy.wait(2000);
-    cy.get("button[data-bs-target='#loginModal']").click({
+    cy.get("button[data-bs-target='#loginModal']:visible").click({
       multiple: true,
     });
     cy.get("#loginModal #loginEmail")
@@ -22,3 +22,5 @@ describe("logout", () => {
     cy.window().its("localStorage.token").should("not.exist");
   });
 });
+
+//trying to fix auto e2e test
