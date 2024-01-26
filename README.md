@@ -34,25 +34,15 @@ Incorporating Cypress for end-to-end tests in this project validates the entire 
 
 ### Installing
 
-1. Clone the repo:
+1. Clone the repo
 
-```bash
-gh repo clone CharlotteValset/social-media-client
-```
-
-2. Initialize git
-
-```
-git init
-```
-
-3. Install dependencies
+2. Install dependencies
 
 ```
 npm i
 ```
 
-4. Build SASS
+3. Build SASS
 
 ```
 npm run build
@@ -62,18 +52,18 @@ npm run build
 
 Runs only Jest tests
 
-```bash
+```
 npm run test-unit
 ```
 
 Runs only Cypress tests
 
-```bash
+```
 npm run test-e2e
 ```
 
 Runs Jest & Cypress tests
 
-```bash
+```
 npm run test
 ```
